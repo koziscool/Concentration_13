@@ -14,10 +14,15 @@ matcherModel = {
 
 	addPair: function(){
 		var value = this.randomValue();
-		this.cards.push( this.getId(), value );
-		this.cards.push( this.getId(), value );
+		this.cards.push( new this.Card( this.getId(), value ));
+		this.cards.push( new this.Card ( this.getId(), value ));
 		this.totalCards += 2;
 	},
+
+	Card: function( id, value ){
+		this.id = id;
+		this.value = value;
+	}
 
 	getId: function(){
 		var id = this.currentId;
