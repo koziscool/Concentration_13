@@ -1,6 +1,7 @@
 
 
 $(document).ready( function(){
+	console.log("koz");
 	$("#grid-size").focus();
 	$("#grid-size-submit").click( function(e){
 		console.log("here");
