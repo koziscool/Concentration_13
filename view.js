@@ -29,5 +29,18 @@ var matcherView= {
 		}		
 	},
 
+	revealCard: function(id){
+		$("#card-" + id).addClass('revealed');
+	},
+
+	setCorrect: function(id){
+		$("#card-" + id).addClass('correct');		
+		$("#card-" + id).off('click');		
+	},
+
+	hideCards: function(){
+		$(".card").not('.correct').removeClass('revealed');
+	}
+
 	updateGameView: function() {},
 };

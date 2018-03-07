@@ -3,8 +3,12 @@ matcherModel = {
 	size: 4,
 	cards: [],
 	cardValues: [ 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J' ],
+	selectedCard: null,
+	numGuesses: 0,
+	matchedCards: 0,
 	totalCards: 0,
 	currentId: 1,
+	gameStateText: "You haven't won yet, pick a pair of cards.",
 
 	init: function(size){
 		this.size = size || this.size;
@@ -44,6 +48,38 @@ matcherModel = {
 			this.cards[currentIndex] = this.cards[rand];
 			this.cards[rand] = temp;
 		}
+	},
+
+	getCard: function(id){
+		for( var i = 0; i < this.cards.length; i++ ){
+			if( this.cards[i].id === id ) return this.cards[i];
+		} 
+		return null;
+	},
+
+	setSelectedCard( id ){
+		this.selectedCard = getCard(id);
+	},
+
+	sameCard: function(id){
+		return this.selectedCard && this.selectedCard.id === id;
+	},
+
+	checkGuess: function(id){
+		this.numGuesses++;	
+		var secondCard = this.getCard(id);
+		
+		var isCorrect = false;		
+		if( secondCard )
+			isCorrect = this.valueMatch( secondCard, this.selectedCard );
+	
+		if( isCorrect ) this.matchedCards += 2;
+		this.selectedCard = null;
+
+		if( this.matchedCards === this.totalCards )
+			this.gameStateText = "Congratulations, you win!";
+	
+		return isCorrect;
 	},
 
 }
