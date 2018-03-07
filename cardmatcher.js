@@ -1,13 +1,5 @@
 
 
-var matcherController = {
-	init: function(size) {},
-};
-
-var matcherView= {
-	updateGameView: function() {},
-};
-
 $(document).ready( function(){
 	$("#grid-size").focus();
 	$("#grid-size-submit").click( function(e){
