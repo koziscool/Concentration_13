@@ -40,7 +40,7 @@ var matcherView= {
 
 	hideCards: function(){
 		$(".card").not('.correct').removeClass('revealed');
-	}
+	},
 
 	updateGameView: function() {},
 };
