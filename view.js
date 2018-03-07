@@ -1,7 +1,8 @@
 
 
 var matcherView= {
-
+	model: matcherModel,
+	
 	init: function(){
 		this.$grid = $("matcher-grid");
 		addCardsToGrid();
