@@ -1,7 +1,7 @@
 
 matcherModel = {
 	size: 4,
-	cardValues = [ 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J' ];
+	cardValues = [ 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J' ],
 	totalCards: 0,
 	currentId: 1,
 
