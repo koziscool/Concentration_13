@@ -65,6 +65,10 @@ matcherModel = {
 		return this.selectedCard && this.selectedCard.id === id;
 	},
 
+	valueMatch: function( card1, card2 ){
+		return card1.value === card2.value;
+	}
+
 	checkGuess: function(id){
 		this.numGuesses++;	
 		var secondCard = this.getCard(id);
