@@ -42,5 +42,10 @@ var matcherView= {
 		$(".card").not('.correct').removeClass('revealed');
 	},
 
-	updateGameView: function() {},
+	updateGameView: function() {
+		$("#game-state-text").text( this.model.gameStateText );
+		$("#num-guesses").text( this.model.numGuesses );
+		$("#total-cards").text( this.model.totalCards );
+		$("#matched-cards").text( this.model.matchedCards );
+	},
 };

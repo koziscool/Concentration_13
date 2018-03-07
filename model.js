@@ -1,5 +1,5 @@
 
-matcherModel = {
+var matcherModel = {
 	size: 4,
 	cards: [],
 	cardValues: [ 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J' ],
@@ -85,5 +85,5 @@ matcherModel = {
 	
 		return isCorrect;
 	},
+};
 
-}
