@@ -22,7 +22,7 @@ matcherModel = {
 	Card: function( id, value ){
 		this.id = id;
 		this.value = value;
-	}
+	},
 
 	getId: function(){
 		var id = this.currentId;
