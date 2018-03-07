@@ -1,10 +1,8 @@
 
 
 $(document).ready( function(){
-	console.log("koz");
 	$("#grid-size").focus();
 	$("#grid-size-submit").click( function(e){
-		console.log("here");
 		e.preventDefault();
 		var size = $("#grid-size").val();
 		matcherController.init(size);

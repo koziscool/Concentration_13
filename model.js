@@ -25,6 +25,10 @@ matcherModel = {
 		return id;
 	},
 
+	randomValue: function(){
+		return this.cardValues[ Math.floor( Math.random() * this.cardValues.length)];
+	}
+
 	shuffle: function(){
 		var currentIndex = this.cards.length, temp, rand;
 		while( currentIndex > 0 ){
