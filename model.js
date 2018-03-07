@@ -58,7 +58,7 @@ matcherModel = {
 	},
 
 	setSelectedCard( id ){
-		this.selectedCard = getCard(id);
+		this.selectedCard = this.getCard(id);
 	},
 
 	sameCard: function(id){
